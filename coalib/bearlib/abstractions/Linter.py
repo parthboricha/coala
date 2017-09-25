@@ -663,6 +663,8 @@ def _create_linter(klass, options):
                     stdin=''.join(file) if options['use_stdin'] else None,
                     cwd=self.get_config_dir())
 
+                print(output)
+
                 output = tuple(compress(
                     output,
                     (options['use_stdout'], options['use_stderr'])))
